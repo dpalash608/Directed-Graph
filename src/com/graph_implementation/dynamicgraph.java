@@ -51,6 +51,7 @@ public class dynamicgraph {
 				print_node();
 				break;
 			case 5:
+				sc.close();
 				System.exit(1);
 
 			}
@@ -94,7 +95,7 @@ public class dynamicgraph {
 		if (adjacency_matrix == null) {
 			adjacency_matrix = new int[nodes + 1][nodes + 1];
 		} else {
-			int[][] temp = new int[nodes + 1][nodes + 1];
+			int[][] temp = new int[adjacency_matrix.length+nodes + 1][adjacency_matrix.length+nodes + 1];
 
 			for (int i = 1; i < adjacency_matrix.length; i++) {
 				for (int j = 1; j < adjacency_matrix.length; j++) {
@@ -104,6 +105,7 @@ public class dynamicgraph {
 
 			}
 			adjacency_matrix = temp;
+			
 		}
 	}
 }
